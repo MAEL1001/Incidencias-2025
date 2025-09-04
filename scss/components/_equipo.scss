@@ -1,0 +1,60 @@
+.trabajadores {
+    @include flex-var(flex,column,space-evenly,center);
+   
+    .acerca {
+        margin-top: 50px;
+        width: 80%;
+        @include flex-var(flex,column,center,center);
+
+        h1 {
+            margin-bottom: 20px;
+            justify-self: center;
+            align-self: center;
+            color: $color-terciario;
+        }
+
+        p {
+            align-self: flex-start;
+            justify-self: center;
+            text-align: justify;
+            line-height: 1.6;
+            font-size: nth($tamanio-text, 6);
+        }
+    }
+
+    .team-grid {
+        display: grid;
+        grid-auto-rows: 250px;
+        grid-template-columns: repeat(4, 250px);
+        grid-gap: 5px;
+        margin-bottom: 20px;
+
+        div {
+            border: solid 2px $color-terciario;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: ease-out 2s;
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+
+        .team-grid-items-5 {
+            background-color: $color-terciario;
+            color: $color-secundario;
+            padding: 15px;
+            grid-row: span 2;
+            text-align: start;
+
+            p {
+                margin-top: 25px;
+            }
+        }
+    }
+}

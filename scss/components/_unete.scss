@@ -1,0 +1,95 @@
+.contenido-unete{
+    @include flex-var(flex,column,center,center);
+    margin-top: 15px;
+    h1{
+        color:$color-terciario;
+    }
+    p{
+        width: 80%;
+        font-size: nth($tamanio-text, 6);
+        line-height: 1.8;
+    }
+
+}
+
+.form-contenedor {
+    height: 90vh;
+    width: 100%;
+    @extend %flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+
+    .formulario-unete {
+        width: 50%;
+        @include flex-var(flex,column,space-evenly,center);
+        background-color: $color-terciario;
+        border-radius: 6px;
+
+        .datos {
+            width: 350px;
+            height: 55px;
+            border: 0px;
+            border-bottom: 2px solid $color-secundario;
+            outline: 0px;
+            font-size: nth($tamanio-text, 6);
+            color: $color-secundario;
+            background-color: $color-terciario;
+            margin-bottom: 0px;
+            
+        }
+
+        select {
+            border: 0px;
+            width: 350px;
+            height: 55px;
+            background-color: $color-terciario;
+            border-radius: 0px;
+            font-size: nth($tamanio-text, 6);
+            outline: 0px;
+            color: $color-secundario;
+            border-bottom: 2px solid $color-secundario;
+        }
+
+        .enviar-fomr {
+            width: 350px;
+            height: 50px;
+            background-color: $color-secundario;
+            border: 0px;
+            border-radius: 5px;
+            color: $color-primario;
+            font-size: nth($tamanio-text, 8 );
+        }
+
+        .genero-user {
+            margin-right: 8px;
+
+            label {
+                margin-left: 20px;
+                font-size: nth($tamanio-text, 7 );
+                padding: 10px;
+                color: $color-secundario;
+            }
+        }
+
+        .tipo-user option {
+            width: 350px;
+            height: 55px;
+            color: $color-terciario;
+            border: 0px;
+            border-bottom: 2px solid $color-primario;
+            outline: 0px;
+        }
+
+        div i {
+            font-size: nth($tamanio-text, 8 );
+            margin-right: 5px;
+            color: $color-secundario;
+        }
+
+        .enviar-fomr:hover {
+            background-color: $color-primario;
+            color: $color-secundario;
+        }
+    }
+}

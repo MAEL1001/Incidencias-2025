@@ -1,0 +1,18 @@
+$color-primario: #e3f2fd ;
+$color-secundario :#020402;
+$color-terciario: #e7a61a;
+
+$tamanio-text:10px,12px, 14px,15px, 16px,18px, 20px,25px,35px,40px;
+
+%flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-var ($flex,$direction,$justify,$aling){
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $aling;
+}

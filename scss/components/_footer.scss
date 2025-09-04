@@ -1,0 +1,91 @@
+footer {
+    background-color: $color-secundario;
+    @include flex-var(flex,column,space-around,center);
+    color: $color-primario;
+    padding: 20px;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 50px;
+
+    >div {
+        margin-top: 40px;
+        width: 90%;
+        @extend %flex;
+        border: solid 1px $color-terciario;
+        flex-wrap: wrap;
+
+        >div {
+            width: 450px;
+            height: 100%;
+            @extend %flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    .footer-items-1 {
+        @include flex-var(flex,column,center,start);
+        padding: 15px;
+
+        h5 {
+            font-size: nth($tamanio-text, 4);
+            text-align: start;
+            margin-bottom: 20px;
+        }
+
+        h6 {
+            font-size: nth($tamanio-text, 3);
+        }
+
+        a {
+            color: $color-primario;
+            margin-left: 10px;
+        }
+    }
+
+    .footer-items-2 {
+        @include flex-var(flex,column,space-evenly,start);
+        color: $color-primario;
+        padding: 20px;
+
+        h5 {
+            font-size: nth($tamanio-text, 6);
+            text-align: start;
+        }
+
+        p {
+            font-size: nth($tamanio-text, 3);
+        }
+    }
+
+    .redes {
+        text-align: center;
+
+        i {
+            color: $color-primario;
+            margin-left: 15px;
+            font-size: nth($tamanio-text, 8);
+        }
+    }
+
+    iframe {
+        height: 240px;
+        width: 100%;
+    }
+
+    .desarrollador {
+        @include flex-var(flex,column,center,center);
+        margin-top: 10px;
+        border: none;
+        >div {
+            width: 100%;
+        }
+
+        img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+    }
+}

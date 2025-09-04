@@ -1,0 +1,40 @@
+header{
+    top: 0;
+    position: sticky;
+    z-index: 10;
+    .navbar{
+        background-color: $color-secundario !important;
+        div{
+            .navbar-brand{
+                color: $color-primario !important;
+                text-decoration: line-through 2px;
+                text-transform: uppercase;
+                &:hover{
+                    color: $color-terciario !important;
+                }
+            }
+            .navbar-toggler{
+                background-color: $color-primario;
+                &:hover{
+                    background-color: $color-terciario;
+                }
+            }
+            div{
+                display: flex;
+                justify-content: end;
+                margin-right: 15px;
+                ul{
+                    li{
+                        a{
+                            color: $color-primario ;
+                            &:hover{
+                                color: $color-terciario !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+}
